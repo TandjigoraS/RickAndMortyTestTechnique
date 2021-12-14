@@ -1,0 +1,58 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.mareu.view.MyListMeetingsActivity">
+
+    <item
+        android:id="@+id/filter"
+        android:contentDescription="@string/content_description_filter"
+        android:icon="@drawable/ic_baseline_filter_list_24"
+        android:title="@string/action_filter"
+        app:showAsAction="ifRoom">
+
+        <menu>
+            <item
+                android:id="@+id/all_characters"
+                android:title="@string/all_characters"
+                app:showAsAction="never|withText" />
+            <item
+                android:id="@+id/filter_by_gender_male"
+                android:title="@string/filter_by_gender_male"
+                app:showAsAction="never|withText" />
+            <item
+                android:id="@+id/filter_by_gender_female"
+                android:title="@string/filter_by_gender_female"
+                app:showAsAction="never|withText" />
+            <item
+                android:id="@+id/filter_by_gender_genderless"
+                android:title="@string/filter_by_gender_genderless"
+                app:showAsAction="never|withText" />
+
+            <item
+                android:id="@+id/filter_by_gender_unknown"
+                android:title="@string/filter_by_gender_unknown"
+                app:showAsAction="never|withText" />
+
+
+            <item
+                android:id="@+id/filter_by_status_dead"
+                android:title="@string/filter_by_status_dead"
+                app:showAsAction="never|withText" />
+            <item
+                android:id="@+id/filter_by_status_alive"
+                android:title="@string/filter_by_status_alive"
+                app:showAsAction="never|withText" />
+            <item
+                android:id="@+id/filter_by_status_unknown"
+                android:title="@string/filter_by_status_unknown"
+                app:showAsAction="never|withText" />
+
+
+        </menu>
+
+    </item>
+
+
+
+
+</menu>

@@ -1,0 +1,14 @@
+query ListCharactersByGenderFemale {
+  characters  (filter : { gender : "Female" } ){
+    results {
+      id
+      name
+      species
+      gender
+      image
+      type
+      status
+
+    }
+  }
+}

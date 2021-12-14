@@ -1,0 +1,14 @@
+query ListCharactersByStatusDead {
+  characters  (filter : { status : "Dead" } ){
+    results {
+      id
+      name
+      species
+      gender
+      image
+      type
+      status
+
+    }
+  }
+}

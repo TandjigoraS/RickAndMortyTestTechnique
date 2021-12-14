@@ -1,0 +1,14 @@
+query ListCharactersByStatusUnknown {
+  characters  (filter : { status : "Unknown" } ){
+    results {
+      id
+      name
+      species
+      gender
+      image
+      type
+      status
+
+    }
+  }
+}

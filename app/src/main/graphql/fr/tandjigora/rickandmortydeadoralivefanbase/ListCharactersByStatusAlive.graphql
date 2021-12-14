@@ -1,0 +1,14 @@
+query ListCharactersByStatusAlive {
+  characters  (filter : { status : "Alive" } ){
+    results {
+      id
+      name
+      species
+      gender
+      image
+      type
+      status
+
+    }
+  }
+}

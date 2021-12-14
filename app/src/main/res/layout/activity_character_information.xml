@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar.Bridge">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapseLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/character_image_information"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:contentDescription="@string/image_character"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax"
+                />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/Theme.MaterialComponents.Light.DarkActionBar" />
+
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/activity_character_information"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="6dp">
+
+                    <TextView
+                        android:id="@+id/character_name_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="@string/name"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/character_name_txt_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        app:layout_constraintStart_toEndOf="@id/character_name_text"
+                        app:layout_constraintTop_toTopOf="@id/character_name_text"/>
+
+                    <TextView
+                        android:id="@+id/character_gender_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/gender"
+                        android:textColor="@color/black"
+                        android:padding="8dp"
+                        app:layout_constraintStart_toStartOf="@id/character_name_text"
+                        app:layout_constraintTop_toBottomOf="@+id/character_name_text"/>
+                    <TextView
+                        android:id="@+id/character_gender_txt_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        app:layout_constraintStart_toEndOf="@+id/character_gender_text"
+                        app:layout_constraintTop_toTopOf="@+id/character_gender_text" />
+
+                    <TextView
+                        android:id="@+id/character_type_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/type"
+                        android:textColor="@color/black"
+                        android:padding="8dp"
+                        app:layout_constraintStart_toStartOf="@id/character_gender_text"
+                        app:layout_constraintTop_toBottomOf="@+id/character_gender_text"/>
+                    <TextView
+                        android:id="@+id/character_type_txt_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        app:layout_constraintStart_toEndOf="@+id/character_type_text"
+                        app:layout_constraintTop_toTopOf="@+id/character_type_text" />
+
+
+                    <TextView
+                        android:id="@+id/character_species_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/species"
+                        android:textColor="@color/black"
+                        android:padding="8dp"
+                        app:layout_constraintStart_toStartOf="@id/character_type_text"
+                        app:layout_constraintTop_toBottomOf="@+id/character_type_text"/>
+                    <TextView
+                        android:id="@+id/character_species_txt_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        app:layout_constraintStart_toEndOf="@+id/character_species_text"
+                        app:layout_constraintTop_toTopOf="@+id/character_species_text" />
+
+                    <TextView
+                        android:id="@+id/character_status_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/status"
+                        android:textColor="@color/black"
+                        android:padding="8dp"
+                        app:layout_constraintStart_toStartOf="@id/character_species_text"
+                        app:layout_constraintTop_toBottomOf="@+id/character_species_text"/>
+                    <TextView
+                        android:id="@+id/character_status_txt_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        app:layout_constraintStart_toEndOf="@+id/character_status_text"
+                        app:layout_constraintTop_toTopOf="@+id/character_status_text" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+

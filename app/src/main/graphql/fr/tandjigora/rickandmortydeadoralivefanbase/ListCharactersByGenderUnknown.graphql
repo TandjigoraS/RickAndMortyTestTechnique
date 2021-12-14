@@ -1,0 +1,14 @@
+query ListCharactersByGenderUnknown {
+  characters  (filter : { gender : "Unknown" } ){
+    results {
+      id
+      name
+      species
+      gender
+      image
+      type
+      status
+
+    }
+  }
+}

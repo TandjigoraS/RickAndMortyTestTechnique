@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Rick and Morty Dead or Alive Fanbase</string>
+    <string name="character_name">Name</string>
+    <string name="character_gender">Gender</string>
+    <string name="image_character">Image character</string>
+    <string name="species">Species :</string>
+    <string name="type">Type :</string>
+    <string name="gender">Gender :</string>
+    <string name="name">Name :</string>
+    <string name="content_description_filter">"Description "</string>
+    <string name="all_characters">All Characters</string>
+    <string name="filter_by_gender_unknown">Filter by gender unknown</string>
+    <string name="filter_by_gender_female">Filter by gender female</string>
+    <string name="filter_by_gender_male">Filter by gender male</string>
+    <string name="filter_by_gender_genderless">Filter by gender genderless</string>
+    <string name="filter_by_status_dead">Filter by status dead</string>
+    <string name="filter_by_status_unknown">Filter by status unknown </string>
+    <string name="filter_by_status_alive">Filter by status alive</string>
+
+    <string name="action_filter">Filter</string>
+    <string name="status">Status : </string>
+    <string name="imagecharacter">ImageCharacter</string>
+    <string name="character_status">Status</string>
+
+</resources>

@@ -1,0 +1,96 @@
+
+
+plugins {
+    id "com.android.application"
+    id 'kotlin-android'
+    id ("com.apollographql.apollo3").version("3.0.0-rc01")
+}
+
+
+
+android {
+
+    compileSdkVersion 31
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "fr.tandjigora.rickandmortydeadoralivefanbase"
+        minSdkVersion 21
+        targetSdkVersion 31
+        versionCode  1
+        versionName  "1.0"
+
+        testInstrumentationRunner  "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunnerArguments clearPackageData: 'true'
+
+    }
+
+    testOptions {
+        execution 'ANDROIDX_TEST_ORCHESTRATOR'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+
+
+    dependencies {
+
+
+
+        implementation "androidx.appcompat:appcompat:1.4.0"
+        implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.0"
+        implementation "com.google.android.material:material:1.4.0"
+        implementation "androidx.constraintlayout:constraintlayout:2.1.2"
+       implementation "com.apollographql.apollo3:apollo-runtime:3.0.0-rc01"
+        // for adding recyclerview
+        implementation "androidx.recyclerview:recyclerview:1.2.1"
+
+        // for adding cardview
+        implementation "androidx.cardview:cardview:1.0.0"
+
+
+        // for adding gilde
+        implementation "com.github.bumptech.glide:glide:4.11.0"
+        annotationProcessor "com.github.bumptech.glide:compiler:4.9.0"
+
+        //Kotin
+        implementation "androidx.core:core-ktx:1.7.0"
+        implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+
+
+        // UNIT TEST
+        testImplementation 'junit:junit:4.13.2'
+        testImplementation ' org.hamcrest:hamcrest-core:1.3'
+        // INSTRUMENTATION TEST
+        androidTestImplementation 'androidx.test:rules:1.4.1-alpha03'
+        androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+        androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+        androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.4.0'
+        androidTestImplementation 'androidx.test:runner:1.4.1-alpha03'
+        androidTestUtil 'androidx.test:orchestrator:1.4.1-rc01'
+
+
+
+    }
+
+    apollo {
+        packageName.set "fr.tandjigora.rickandmortydeadoralivefanbase"
+    }
+repositories {
+    mavenCentral()
+}
+

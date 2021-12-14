@@ -1,0 +1,14 @@
+query ListCharacters ($filter : FilterCharacter){
+  characters  (filter : $filter ){
+    results {
+      id
+      name
+      species
+      gender
+      image
+      type
+      status
+
+    }
+  }
+}
